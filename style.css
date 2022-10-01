@@ -1,0 +1,311 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    padding: 10px;
+    height:70px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+.navButton{
+    font-size: 150%;
+    color: aliceblue;
+    border: none;
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    min-width: 100px;
+
+    --border-size : 3px
+}
+
+.navButton::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: rgb(255, 255, 255);
+    transition: transform 200ms ease-in-out;
+
+    transform: scaleX(0);
+}
+
+.navButton:hover::before,
+.navButton:focus::before{
+    transform: scaleX(1);
+}
+
+.animation-container{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.animated{
+    width: 30%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.animated.fade-in-left{
+    background-image: url("moon1.jpg");
+    -webkit-animation: fadeInLeft 1.2s both;
+    -moz-animation: fadeInLeft 1.2s both;
+    -o-animation: fadeInLeft 1.2s both;
+    animation: fadeInLeft 1.2s both;
+}
+
+@-webkit-keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+@-moz-keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0px);
+    }
+}
+@-o-keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        -o-transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0px);
+    }
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.animated.fade-in-top{
+    background-image: url("moon2.jpg");
+    -webkit-animation: fadeInTop 1.2s both;
+    -moz-animation: fadeInTop 1.2s both;
+    -o-animation: fadeInTop 1.2s both;
+    animation: fadeInTop 1.2s both;
+}
+
+@-webkit-keyframes fadeInTop{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+}
+@-moz-keyframes fadeInTop{
+    0%{
+        opacity: 0;
+        -moz-transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateY(0px);
+    }
+}
+@-o-keyframes fadeInTop{
+    0%{
+        opacity: 0;
+        -o-transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateY(0px);
+    }
+}
+@keyframes fadeInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.animated.fade-in-right{
+    background-image: url("moon3.jpg");
+    -webkit-animation: fadeInRight 1.2s both;
+    -moz-animation: fadeInRight 1.2s both;
+    -o-animation: fadeInRight 1.2s both;
+    animation: fadeInRight 1.2s both;
+}
+
+@-webkit-keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+}
+@-moz-keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        -moz-transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translateX(0px);
+    }
+}
+@-o-keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        -o-transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translateX(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.main-img{
+    background-image: url(mainMoon.jpg);
+    width: 100%;
+    height: 1000px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    font-size: 15vw;
+}
+
+.about{
+    background-color: black;
+    margin: 0;
+    padding: 70px 20px 20px 20px;
+}
+.about-title{
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+.about-text{
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+}
+
+.credits{
+    background-color: black;
+    margin: 0;
+    padding: 0 20px 20px 20px;
+}
+.credits-title{
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+.credits-text{
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+}
+
+.our-images{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.profile-image{
+    aspect-ratio: 1/1;
+    width: 20%;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url("profile.webp");
+    transition: 0.7s;
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
+
+.name{
+    font-size: 2vw;
+}
+
+.map{
+    padding: 30px;
+}
+
+.map-title{
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+.big-circle{
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
